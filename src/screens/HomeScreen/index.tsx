@@ -1,13 +1,14 @@
 import React from 'react';
 import {FlatList, ScrollView, StyleSheet, Text} from 'react-native';
+import {Card, PopularCade} from './components';
 import {popular, anxiety, sleep} from '../../assets/data';
 import {colors} from '../../config/color';
-import {Card, PopularCade} from './components';
+import mainStyle from '../../config/styles';
 
 const HomeScreen: React.FC = () => {
   return (
     <ScrollView style={styles.screen}>
-      <Text style={styles.title}>popular </Text>
+      <Text style={mainStyle.boldTitle}>popular </Text>
       <FlatList
         data={popular}
         keyExtractor={item => item.id}
@@ -15,16 +16,15 @@ const HomeScreen: React.FC = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
       />
-      <Text style={styles.title}>anxiety </Text>
+      <Text style={mainStyle.boldTitle}>anxiety </Text>
       <FlatList
-        style={styles.flatList}
         data={anxiety}
         keyExtractor={item => item.id}
         renderItem={Card}
         horizontal
         showsHorizontalScrollIndicator={false}
       />
-      <Text style={styles.title}>sleep </Text>
+      <Text style={mainStyle.boldTitle}>sleep </Text>
       <FlatList
         style={styles.flatList}
         data={sleep}
@@ -44,9 +44,10 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   flatList: {
-    marginTop: 10,
+    marginBottom: 40,
   },
   title: {
+    marginBottom: 10,
     marginTop: 25,
     textTransform: 'uppercase',
     marginLeft: 12,

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
 //TYPES
 import {MeditationItem} from '../../../../types';
 //RENDER && STYLES
@@ -10,12 +10,12 @@ import {colors} from '../../../../config/color';
 const Card: React.FC<MeditationItem> = ({item}) => {
   const {time, image, title, subtitle} = item;
   return (
-    <View style={styles.card}>
+    <TouchableOpacity style={styles.card}>
       <Image source={image} style={styles.img} />
       <Text style={theme.mainTitle}>{title}</Text>
       <Text style={theme.subTitle}>{subtitle}</Text>
       <Text style={theme.primaryTitle}>{time} minutes</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

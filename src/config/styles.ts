@@ -13,7 +13,7 @@ export default StyleSheet.create({
   },
   mainTitle: {
     fontWeight: '500',
-    color: colors.black,
+    color: colors.secondary,
     margin: 10,
     fontSize: 18,
   },
@@ -25,5 +25,14 @@ export default StyleSheet.create({
   primaryTitle: {
     color: colors.primary,
     margin: 10,
+  },
+  boldTitle: {
+    marginBottom: 10,
+    marginTop: 25,
+    textTransform: 'uppercase',
+    marginLeft: 12,
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: colors.secondary,
   },
 });

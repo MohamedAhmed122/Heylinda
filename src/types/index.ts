@@ -17,6 +17,11 @@ export interface Meditation {
   track: number;
 }
 
+export interface Stats {
+  title: string;
+  subTitle: string;
+}
+
 export interface MeditationItem {
   item: Meditation;
 }
