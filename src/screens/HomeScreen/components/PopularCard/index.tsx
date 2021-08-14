@@ -23,14 +23,14 @@ export default Card;
 const styles = StyleSheet.create({
   card: {
     width: width - (width / 3 + 10),
-    height: height - height / 1.5,
+    height: height - height / 1.9,
     marginLeft: 12,
     backgroundColor: colors.white,
     borderRadius: 5,
     overflow: 'hidden',
   },
   img: {
-    height: (height - height / 1.5) / 1.5,
+    height: height - height / 1.5,
     width: '100%',
   },
 });

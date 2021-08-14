@@ -16,3 +16,7 @@ export interface Meditation {
 
   track: number;
 }
+
+export interface MeditationItem {
+  item: Meditation;
+}

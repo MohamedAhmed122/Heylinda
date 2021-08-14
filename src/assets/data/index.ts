@@ -1,9 +1,9 @@
-import {v4 as uuid} from 'uuid';
+// import {v4 as uuid} from 'uuid';
 import {Meditation} from '../../types';
 
 export const popular: Meditation[] = [
   {
-    id: uuid(),
+    id: '1',
     order: 1,
     title: 'Power of Love',
     track: 0,
@@ -13,7 +13,7 @@ export const popular: Meditation[] = [
     image: require('../images/meditate6.jpg'),
   },
   {
-    id: uuid(),
+    id: ' 2',
     order: 2,
     title: 'Quick Powerful Meditation',
     track: 1,
@@ -23,7 +23,7 @@ export const popular: Meditation[] = [
     image: require('../images/meditate1.jpg'),
   },
   {
-    id: uuid(),
+    id: ' 3',
     order: 3,
     title: 'Deep Breathing',
     track: 2,
@@ -33,7 +33,7 @@ export const popular: Meditation[] = [
     image: require('../images/meditate2.jpg'),
   },
   {
-    id: uuid(),
+    id: ' 4',
     order: 4,
     title: 'Yawn and Stretch',
     subtitle: 'Rise and Shine',
@@ -46,7 +46,7 @@ export const popular: Meditation[] = [
 
 export const anxiety: Meditation[] = [
   {
-    id: uuid(),
+    id: '5',
     order: 1,
     title: 'Deep and Quick Relaxation',
     track: 4,
@@ -56,7 +56,7 @@ export const anxiety: Meditation[] = [
     image: require('../images/meditate3.jpg'),
   },
   {
-    id: uuid(),
+    id: '6',
     order: 2,
     title: 'Calming Medition',
     subtitle: 'Deep Relaxation',
@@ -66,7 +66,7 @@ export const anxiety: Meditation[] = [
     image: require('../images/meditate4.jpg'),
   },
   {
-    id: uuid(),
+    id: '7',
     order: 2,
     title: 'Candle Relaxation',
     subtitle: 'Get Some Rest',
@@ -79,7 +79,7 @@ export const anxiety: Meditation[] = [
 
 export const sleep: Meditation[] = [
   {
-    id: uuid(),
+    id: '8',
     order: 1,
     title: 'Deep Sleep',
     subtitle: 'Wake Up Refreshed',
@@ -89,7 +89,7 @@ export const sleep: Meditation[] = [
     image: require('../images/tea.jpg'),
   },
   {
-    id: uuid(),
+    id: '9',
     order: 2,
     title: 'Short Sleep',
     subtitle: 'For Taking a Nap',
@@ -99,7 +99,7 @@ export const sleep: Meditation[] = [
     image: require('../images/sleep.jpg'),
   },
   {
-    id: uuid(),
+    id: '10',
     order: 2,
     title: 'Good Sleep',
     track: 12,
@@ -109,9 +109,3 @@ export const sleep: Meditation[] = [
     image: require('../images/sleep2.jpg'),
   },
 ];
-
-export const meditations = {
-  popular,
-  sleep,
-  anxiety,
-};
