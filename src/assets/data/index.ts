@@ -1,5 +1,5 @@
 // import {v4 as uuid} from 'uuid';
-import {Meditation} from '../../types';
+import {Meditation} from '../../typeRoots';
 
 export const popular: Meditation[] = [
   {

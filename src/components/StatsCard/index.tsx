@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {colors} from '../../config/color';
+import {colors} from '@config/color';
 //TYPES
-import {Stats} from '../../types';
+import {Stats} from '@typeRoots/index';
 
 const StatsCard: React.FC<Stats> = ({title, subTitle}) => {
   return (

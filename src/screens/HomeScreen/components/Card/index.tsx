@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
 //TYPES
-import {MeditationItem} from '../../../../types';
+import {MeditationItem} from '../../../../typeRoots';
 //RENDER && STYLES
 import theme from '../../../../config/styles';
 import {width, height} from '../../../../config/layout';

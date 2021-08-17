@@ -1,9 +1,9 @@
 import React from 'react';
 import {FlatList, ScrollView, StyleSheet, Text} from 'react-native';
 import {Card, PopularCade} from './components';
-import {popular, anxiety, sleep} from '../../assets/data';
-import {colors} from '../../config/color';
-import mainStyle from '../../config/styles';
+import {popular, anxiety, sleep} from '@assets/data';
+import {colors} from '@config/color';
+import mainStyle from '@config/styles';
 
 const HomeScreen: React.FC = () => {
   return (
