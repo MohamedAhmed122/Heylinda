@@ -1,28 +1,59 @@
 import React from 'react';
 //NAVIGATION
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {
+  StatsNavigation,
+  SettingsNavigation,
+  HomeNavigation,
+} from './StackNavigation';
 //TYPES
-import {RootStackParamList} from 'typeRoots/Routes';
-//SCREEN
-import HomeScreen from '@screens/HomeScreen';
-import Completed from 'screens/CompletedScreen';
-import NotFound from '@screens/NotFoundScreen/index';
-import PlayScreen from '@screens/PlayScreen/index';
-import StatsScreen from '@screens/StatsScreen/index';
+import {RootTabParamList} from 'typeRoots/Routes';
+//
+import Entypo from 'react-native-vector-icons/Entypo';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {colors} from 'config';
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator<RootTabParamList>();
 
 export default function index() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Complete" component={Completed} />
-        <Stack.Screen name="NotFound" component={NotFound} />
-        <Stack.Screen name="Play" component={PlayScreen} />
-        <Stack.Screen name="Stats" component={StatsScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          headerShown: false,
+          tabBarActiveTintColor: colors.secondary,
+          tabBarInactiveTintColor: colors.gray,
+        }}>
+        <Tab.Screen
+          name="Home"
+          component={HomeNavigation}
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <Entypo name="home" size={size} color={color} />
+            ),
+          }}
+        />
+
+        <Tab.Screen
+          name="Stats"
+          component={StatsNavigation}
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <MaterialIcons name="date-range" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Setting"
+          component={SettingsNavigation}
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <MaterialIcons name="settings" size={size} color={color} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }

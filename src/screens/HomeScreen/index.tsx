@@ -7,7 +7,7 @@ import mainStyle from '@config/styles';
 
 const HomeScreen: React.FC = () => {
   return (
-    <ScrollView style={styles.screen}>
+    <ScrollView>
       <Text style={mainStyle.boldTitle}>popular </Text>
       <FlatList
         data={popular}
@@ -40,9 +40,6 @@ const HomeScreen: React.FC = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  screen: {
-    marginTop: 50,
-  },
   flatList: {
     marginBottom: 40,
   },

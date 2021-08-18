@@ -1,9 +1,25 @@
 export type NO_PARAMS = undefined;
 
-export type RootStackParamList = {
+export type RootTabParamList = {
   Home: NO_PARAMS;
-  Complete: NO_PARAMS;
-  NotFound: NO_PARAMS;
-  Play: NO_PARAMS;
+  Setting: NO_PARAMS;
   Stats: NO_PARAMS;
+};
+
+export type RootStackHomeParamList = {
+  HomeScreen: NO_PARAMS;
+  PlayScreen: NO_PARAMS;
+};
+
+export type RootStackStatsParamList = {
+  StatsScreen: NO_PARAMS;
+};
+
+export type RootStackSettingsParamList = {
+  SettingsScreen: NO_PARAMS;
+};
+
+export type HomeParamList = {
+  HomeScreen: NO_PARAMS;
+  PlayScreen: NO_PARAMS;
 };

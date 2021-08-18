@@ -1,14 +1,15 @@
 import React from 'react';
 import {StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 //TYPES
-import {MeditationItem} from '../../../../typeRoots';
+import {MeditationItem} from '@typeRoots/index';
 //RENDER && STYLES
-import theme from '../../../../config/styles';
-import {width, height} from '../../../../config/layout';
-import {colors} from '../../../../config/color';
+import theme from '@config/styles';
+import {width, height} from '@config/layout';
+import {colors} from '@config/color';
 
 const Card: React.FC<MeditationItem> = ({item}) => {
   const {time, image, title, subtitle} = item;
+
   return (
     <TouchableOpacity style={styles.card}>
       <Image source={image} style={styles.img} />
