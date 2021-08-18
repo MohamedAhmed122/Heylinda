@@ -24,4 +24,5 @@ export interface Stats {
 
 export interface MeditationItem {
   item: Meditation;
+  onPress?: () => void;
 }

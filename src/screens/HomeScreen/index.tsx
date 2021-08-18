@@ -1,18 +1,32 @@
 import React from 'react';
 import {FlatList, ScrollView, StyleSheet, Text} from 'react-native';
+//TYPES
+import {StackNavigationProp} from '@react-navigation/stack';
+import {HomeParamList} from '@typeRoots/Routes';
+import {Meditation} from '@typeRoots/index';
+//COMPONENTS && STYLES
 import {Card, PopularCade} from './components';
 import {popular, anxiety, sleep} from '@assets/data';
 import {colors} from '@config/color';
 import mainStyle from '@config/styles';
 
-const HomeScreen: React.FC = () => {
+interface HomeScreenProps {
+  navigation: StackNavigationProp<HomeParamList, 'HomeScreen'>;
+}
+
+const HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
+  const handlePress = (item: Meditation): void => {
+    navigation.navigate('PlayScreen', {item});
+  };
   return (
     <ScrollView>
       <Text style={mainStyle.boldTitle}>popular </Text>
       <FlatList
         data={popular}
         keyExtractor={item => item.id}
-        renderItem={PopularCade}
+        renderItem={({item}) => (
+          <PopularCade item={item} onPress={() => handlePress(item)} />
+        )}
         horizontal
         showsHorizontalScrollIndicator={false}
       />
@@ -20,7 +34,9 @@ const HomeScreen: React.FC = () => {
       <FlatList
         data={anxiety}
         keyExtractor={item => item.id}
-        renderItem={Card}
+        renderItem={({item}) => (
+          <Card item={item} onPress={() => handlePress(item)} />
+        )}
         horizontal
         showsHorizontalScrollIndicator={false}
       />
@@ -29,7 +45,9 @@ const HomeScreen: React.FC = () => {
         style={styles.flatList}
         data={sleep}
         keyExtractor={item => item.id}
-        renderItem={Card}
+        renderItem={({item}) => (
+          <Card item={item} onPress={() => handlePress(item)} />
+        )}
         horizontal
         showsHorizontalScrollIndicator={false}
       />

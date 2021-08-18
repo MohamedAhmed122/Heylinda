@@ -31,6 +31,7 @@ export const HomeNavigation = () => {
       />
       <HomeStack.Screen
         options={{
+          headerShown: false,
           headerTitle: 'Play',
           headerStyle: styles.header,
           headerTitleStyle: styles.headerTitle,
@@ -65,14 +66,9 @@ export const SettingsNavigation = () => {
     <SettingStack.Navigator>
       <SettingStack.Screen
         options={{
-          title: 'Settings',
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
+          headerTitle: 'Settings',
+          headerStyle: styles.header,
+          headerTitleStyle: styles.headerTitle,
         }}
         name="SettingsScreen"
         component={SettingScreen}

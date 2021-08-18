@@ -7,11 +7,11 @@ import theme from '@config/styles';
 import {width, height} from '@config/layout';
 import {colors} from '@config/color';
 
-const Card: React.FC<MeditationItem> = ({item}) => {
+const Card: React.FC<MeditationItem> = ({item, onPress}) => {
   const {time, image, title, subtitle} = item;
 
   return (
-    <TouchableOpacity style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={onPress}>
       <Image source={image} style={styles.img} />
       <Text style={theme.mainTitle}>{title}</Text>
       <Text style={theme.subTitle}>{subtitle}</Text>
