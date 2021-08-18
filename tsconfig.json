@@ -66,7 +66,7 @@
         "@components/*": ["src/components/*"],
         "@utils/*": ["src/utils/*"],
         "@typeRoots/*": ["src/typeRoots/*"],
-        "@screen/*": ["src/screen/*"],
+        "@screens/*": ["src/screens/*"],
         "@config/*": ["src/config/*"],
         "@assets/*": ["src/assets/*"],
       },
