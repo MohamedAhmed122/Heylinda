@@ -14,7 +14,7 @@ export default function index() {
         textSectionTitleDisabledColor: '#d9e1e8',
         selectedDayBackgroundColor: '#00adf5',
         selectedDayTextColor: '#ffffff',
-        todayTextColor: colors.secondary,
+        todayTextColor: colors.primary,
         arrowColor: colors.secondary,
       }}
     />
