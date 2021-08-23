@@ -24,11 +24,12 @@ export default function index() {
 const styles = StyleSheet.create({
   calender: {
     width: '95%',
-    backgroundColor: colors.white,
+    justifyContent: 'flex-start',
+    backgroundColor: colors.lightGrayPlus,
     marginLeft: '2.5%',
-    marginTop: 20,
     height: 330,
     padding: 10,
     borderRadius: 10,
+    marginTop: 40,
   },
 });

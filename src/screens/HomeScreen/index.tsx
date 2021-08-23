@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, ScrollView, StyleSheet, Text} from 'react-native';
+import {FlatList, StyleSheet, Text} from 'react-native';
 //TYPES
 import {StackNavigationProp} from '@react-navigation/stack';
 import {HomeParamList} from '@typeRoots/Routes';
@@ -9,6 +9,7 @@ import {Card, PopularCade} from './components';
 import {popular, anxiety, sleep} from '@assets/data';
 import {colors} from '@config/color';
 import mainStyle from '@config/styles';
+import Screen from 'common/Screen';
 
 interface HomeScreenProps {
   navigation: StackNavigationProp<HomeParamList, 'HomeScreen'>;
@@ -19,7 +20,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
     navigation.navigate('PlayScreen', {item});
   };
   return (
-    <ScrollView>
+    <Screen scroll>
       <Text style={mainStyle.boldTitle}>popular </Text>
       <FlatList
         data={popular}
@@ -51,7 +52,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
         horizontal
         showsHorizontalScrollIndicator={false}
       />
-    </ScrollView>
+    </Screen>
   );
 };
 

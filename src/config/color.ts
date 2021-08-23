@@ -6,7 +6,7 @@ export const colors = {
   beige: '#D9CA9C',
   gray: '#828282',
   lightGray: '#c7c6c1',
-  lightGrayPlus: '#D9dddc',
+  lightGrayPlus: '#f5f5f5',
   white: '#fff',
   black: '#0D0D0D',
 };

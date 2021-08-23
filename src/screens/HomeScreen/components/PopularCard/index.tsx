@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     width: width - (width / 3 + 10),
     height: height - height / 1.9,
     marginLeft: 12,
-    backgroundColor: colors.white,
+    backgroundColor: colors.lightGrayPlus,
     borderRadius: 5,
     overflow: 'hidden',
   },

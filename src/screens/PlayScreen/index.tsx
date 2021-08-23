@@ -8,6 +8,7 @@ import {HomeParamList} from '@typeRoots/Routes';
 import {playSong, getInfo} from 'utils/sound';
 import PlaySound from './SoundPlayer';
 import SoundPlayer from 'react-native-sound-player';
+import Screen from 'common/Screen';
 
 interface PlayScreenProps {
   route: RouteProp<HomeParamList, 'PlayScreen'>;
@@ -75,16 +76,18 @@ const PlayScreen: React.FC<PlayScreenProps> = ({route}) => {
   const skipBack = (): void => SoundPlayer.seek(-15);
 
   return (
-    <PlaySound
-      item={item}
-      onPressPlay={isPressed ? handleResumeSound : handlePlaySound}
-      loading={loading}
-      isFinished={isFinished}
-      isPaused={isPaused}
-      onPressPause={handlePauseSound}
-      skip={skip}
-      skipBack={skipBack}
-    />
+    <Screen>
+      <PlaySound
+        item={item}
+        onPressPlay={isPressed ? handleResumeSound : handlePlaySound}
+        loading={loading}
+        isFinished={isFinished}
+        isPaused={isPaused}
+        onPressPause={handlePauseSound}
+        skip={skip}
+        skipBack={skipBack}
+      />
+    </Screen>
   );
 };
 

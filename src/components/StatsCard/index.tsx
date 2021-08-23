@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   card: {
     height: 100,
     width: 150,
-    backgroundColor: colors.white,
+    backgroundColor: colors.lightGrayPlus,
     padding: 20,
     borderRadius: 5,
     marginRight: 0,
