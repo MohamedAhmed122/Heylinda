@@ -3,7 +3,7 @@ import {colors} from 'config';
 import React from 'react';
 import {ActivityIndicator} from 'react-native';
 
-export default function index() {
+export default function Loading() {
   return (
     <ActivityIndicator
       color={colors.secondary}

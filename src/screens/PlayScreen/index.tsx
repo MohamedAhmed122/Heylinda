@@ -1,6 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
 import {RouteProp} from '@react-navigation/native';
+// REDUX
+import {useDispatch} from 'react-redux';
+import {addSession} from '@redux/freeSessions/actions';
+import {AppDispatch} from 'redux/store';
 //TYPES
 import {EmitterSubscription} from 'react-native';
 import {HomeParamList} from '@typeRoots/Routes';
@@ -20,6 +24,8 @@ const PlayScreen: React.FC<PlayScreenProps> = ({route}) => {
   const [isPaused, setIsPaused] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
 
+  const dispatch = useDispatch<AppDispatch>();
+
   // instance variables to store the subscriptions
   let _onFinishedPlayingSubscription: EmitterSubscription;
   let _onFinishedLoadingSubscription: EmitterSubscription;
@@ -31,6 +37,7 @@ const PlayScreen: React.FC<PlayScreenProps> = ({route}) => {
       ({success}) => {
         console.log('finished playing', success);
         setIsFinished(true);
+        dispatch(addSession(Number(item.time)));
       },
     );
     _onFinishedLoadingSubscription = SoundPlayer.addEventListener(

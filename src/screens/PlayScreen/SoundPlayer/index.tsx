@@ -5,9 +5,10 @@ import {Meditation} from '@typeRoots/index';
 //COMPONENT && STYLES
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Loading from '@common/Loading';
 import {colors} from 'config';
 import styles from './styles';
-
+// import RNTimer from 'react-native-counter-timer';
 interface SoundPlayerProps {
   item: Meditation;
   onPressPlay: () => void;
@@ -28,44 +29,52 @@ const SoundPlayer: React.FC<SoundPlayerProps> = ({
   skip,
   skipBack,
 }) => {
-  console.log(loading, isFinished);
+  console.log(loading, 'loading');
+
   return (
     <View style={styles.container}>
       <Image source={item.image} resizeMode="cover" style={styles.image} />
       <Text style={styles.title}>{item.title}</Text>
       <Text style={styles.subTitle}>{item.subtitle}</Text>
-      <View style={styles.playerContainer}>
-        <Text style={styles.time}>00:00</Text>
-        <FontAwesome
-          name="rotate-left"
-          color={colors.secondary}
-          size={21}
-          onPress={skipBack}
-        />
-        {isPaused ? (
-          <AntDesign
-            name="pausecircle"
+      {loading ? (
+        <Loading />
+      ) : (
+        <View style={styles.playerContainer}>
+          <Text style={styles.time}>00:00</Text>
+          {/* <RNTimer timer={timer} /> */}
+          <FontAwesome
+            name="rotate-left"
             color={colors.secondary}
-            size={40}
-            onPress={onPressPause}
+            size={21}
+            onPress={skipBack}
           />
-        ) : (
-          <AntDesign
-            name="play"
+          {isPaused && !isFinished ? (
+            <AntDesign
+              name="pausecircle"
+              color={colors.secondary}
+              size={40}
+              onPress={onPressPause}
+            />
+          ) : (
+            <AntDesign
+              name="play"
+              color={colors.secondary}
+              size={40}
+              onPress={onPressPlay}
+            />
+          )}
+          <FontAwesome
+            name="rotate-right"
             color={colors.secondary}
-            size={40}
-            onPress={onPressPlay}
+            size={21}
+            onPress={skip}
           />
-        )}
-        <FontAwesome
-          name="rotate-right"
-          color={colors.secondary}
-          size={21}
-          onPress={skip}
-        />
-        <Text style={styles.time}>{item.time}</Text>
-      </View>
+          <Text style={styles.time}>{item.time}</Text>
+        </View>
+      )}
     </View>
   );
 };
 export default SoundPlayer;
+
+// https://www.codegrepper.com/code-examples/javascript/react+timer+count+up

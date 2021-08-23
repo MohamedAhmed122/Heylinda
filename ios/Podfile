@@ -13,6 +13,9 @@ target 'HeyLinda' do
   )
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
+  # pod 'React-ART', :path => '../node_modules/react-native/Libraries/ART'
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
 
   target 'HeyLindaTests' do
     inherit! :complete

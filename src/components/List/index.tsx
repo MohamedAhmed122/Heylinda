@@ -35,7 +35,7 @@ export default List;
 const styles = ScaledSheet.create({
   list: {
     width: '100%',
-    height: 40,
+    height: 45,
     alignItems: 'center',
     backgroundColor: colors.lightGrayPlus,
     flexDirection: 'row',
