@@ -17,7 +17,7 @@ interface HomeScreenProps {
 
 const HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
   const handlePress = (item: Meditation): void => {
-    navigation.navigate('PlayScreen', {item});
+    navigation.navigate('PlayScreen', {id: item.id});
   };
   return (
     <Screen scroll>

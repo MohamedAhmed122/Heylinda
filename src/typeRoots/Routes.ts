@@ -1,5 +1,5 @@
 export type NO_PARAMS = undefined;
-import {Meditation} from './index';
+// import {Meditation} from './index';
 
 export type RootTabParamList = {
   Home: NO_PARAMS;
@@ -22,5 +22,9 @@ export type RootStackSettingsParamList = {
 
 export type HomeParamList = {
   HomeScreen: NO_PARAMS;
-  PlayScreen: {item: Meditation};
+  PlayScreen: {id: string};
+};
+
+export type PlayNestedParamList = {
+  PlayScreen: {id: string};
 };
