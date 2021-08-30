@@ -27,6 +27,7 @@ const Container: React.FC<ContainerProps> = ({id, navigation}) => {
   const [isFinished, setIsFinished] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
+  const [currentSong, setCurrentSong] = useState<string | null>(null);
 
   let nextId = (Number(id) + 1).toString();
   let prevId = (Number(id) - 1).toString();
@@ -40,6 +41,12 @@ const Container: React.FC<ContainerProps> = ({id, navigation}) => {
   // instance variables to store the subscriptions
   let _onFinishedPlayingSubscription: EmitterSubscription;
   let _onFinishedLoadingSubscription: EmitterSubscription;
+
+  useEffect(() => {
+    if (item) {
+      setCurrentSong(item.uri);
+    }
+  }, [item]);
 
   // Subscribe to events you want when component mounted
   useEffect(() => {
@@ -69,8 +76,8 @@ const Container: React.FC<ContainerProps> = ({id, navigation}) => {
   // handle PlaySound for the first time
   const handlePlaySound = (): void => {
     setLoading(true);
-    if (item) {
-      playSong(item.uri);
+    if (currentSong) {
+      playSong(currentSong);
     }
     getInfo();
     setIsPaused(true);
@@ -89,11 +96,25 @@ const Container: React.FC<ContainerProps> = ({id, navigation}) => {
     setIsPaused(true);
   };
 
+  // Stop && reset the state
+  const stopSound = (): void => {
+    SoundPlayer.stop();
+    setIsFinished(false);
+    setIsPaused(false);
+    setIsPressed(false);
+  };
+
   // handle go to next sound
-  const goNext = (): void => navigation.navigate('PlayScreen', {id: nextId});
+  const goNext = (): void => {
+    stopSound();
+    navigation.navigate('PlayScreen', {id: nextId});
+  };
 
   // handle go back sound
-  const goBack = (): void => navigation.navigate('PlayScreen', {id: prevId});
+  const goBack = (): void => {
+    stopSound();
+    navigation.navigate('PlayScreen', {id: prevId});
+  };
 
   return (
     <Screen>
