@@ -1,13 +1,14 @@
-import {Action, ActionType} from './types';
+import {Action, ActionType, dateType} from './types';
+import {addNewDate} from 'utils/date';
 
 const initialState = {
-  days: 0,
+  days: [],
   sessions: 0,
   minutes: 0,
 };
 
 interface SessionState {
-  days: number;
+  days: dateType[] | [];
   sessions: number;
   minutes: number;
 }
@@ -19,13 +20,13 @@ const sessionReducer = (
   switch (action.type) {
     case ActionType.ADD_NEW_SESSION:
       return {
-        days: state.days + 1,
-        sessions: state.days + 1,
+        days: addNewDate(state.days),
+        sessions: state.sessions + 1,
         minutes: state.minutes + action.payload,
       };
     case ActionType.REMOVE_ALL_SESSIONS:
       return {
-        days: 0,
+        days: [],
         sessions: 0,
         minutes: 0,
       };

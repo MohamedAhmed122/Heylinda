@@ -19,7 +19,7 @@ const StatsScreen: React.FC = () => {
     <Screen scroll>
       <Text style={MainStyle.boldTitle}>Stats </Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <StatsCard title="Current Streak" subTitle={`${days} days`} />
+        <StatsCard title="Current Streak" subTitle={`${days?.length} days`} />
         <StatsCard title="Total Sessions" subTitle={`${sessions} sessions`} />
         <StatsCard title="Listened" subTitle={`${minutes} minutes`} />
       </ScrollView>

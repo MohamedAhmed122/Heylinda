@@ -12,4 +12,9 @@ interface RemoveSessions {
   type: ActionType.REMOVE_ALL_SESSIONS;
 }
 
+export type dateType = {
+  selected: boolean;
+  date: string;
+  selectedColor: string;
+};
 export type Action = AddSession | RemoveSessions;

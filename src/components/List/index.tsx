@@ -10,16 +10,18 @@ interface ListProps {
   name?: string;
   title: string;
   separate?: boolean;
+  onPress: () => void;
 }
 const List: React.FC<ListProps> = ({
   color = colors.gray,
   name,
   title,
   separate,
+  onPress,
 }) => {
   return (
     <>
-      <TouchableOpacity style={styles.list}>
+      <TouchableOpacity style={styles.list} onPress={onPress}>
         {name && (
           <Icon name={name} color={color} size={25} style={styles.icon} />
         )}
