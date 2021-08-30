@@ -1,5 +1,6 @@
 import React from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, Platform} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 interface ScreenProps {
   scroll?: boolean;
@@ -9,7 +10,7 @@ const Screen: React.FC<ScreenProps> = ({children, scroll}) => {
   if (scroll) {
     return <ScrollView style={styles.screen}>{children}</ScrollView>;
   } else {
-    return <View style={styles.screen}>{children}</View>;
+    return <SafeAreaView style={styles.screen}>{children}</SafeAreaView>;
   }
 };
 
@@ -20,5 +21,6 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     backgroundColor: 'white',
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
   },
 });

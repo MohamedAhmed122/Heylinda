@@ -1,19 +1,12 @@
 import {ImageSourcePropType} from 'react-native';
 export interface Meditation {
   id: string;
-
   title: string;
-
   subtitle: string;
-
   time: number;
-
   order: number;
-
   image: ImageSourcePropType;
-
   uri: string;
-
   track: number;
 }
 
@@ -25,4 +18,11 @@ export interface Stats {
 export interface MeditationItem {
   item: Meditation;
   onPress?: () => void;
+}
+
+export interface UserRegisterValue {
+  name: string;
+  email: string;
+  phone: string;
+  password: string;
 }
