@@ -11,4 +11,10 @@ export default ScaledSheet.create({
     margin: '10@s',
     fontSize: '16@s',
   },
+  icon: {
+    marginHorizontal: 10,
+  },
+  bottom: {
+    marginBottom: 35,
+  },
 });

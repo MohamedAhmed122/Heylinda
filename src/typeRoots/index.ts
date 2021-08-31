@@ -23,6 +23,6 @@ export interface MeditationItem {
 export interface UserRegisterValue {
   name: string;
   email: string;
-  phone: string;
+  confirmPassword: string;
   password: string;
 }

@@ -12,7 +12,8 @@ import {
 interface AppInputProps {
   placeholder: string;
   value: string;
-  icon?: boolean;
+
+  secureTextEntry?: boolean;
   onChangeText: (text: string) => void;
   onBlur?:
     | ((e: NativeSyntheticEvent<TextInputFocusEventData>) => void)
@@ -23,15 +24,17 @@ const AppInput: React.FC<AppInputProps> = ({
   placeholder,
   value,
   onChangeText,
-  icon,
+
   children,
+  secureTextEntry,
   onBlur,
   ...otherProps
 }) => {
   return (
     <View style={styles.container}>
-      {icon && {children}}
+      {children}
       <TextInput
+        secureTextEntry={secureTextEntry}
         value={value}
         placeholder={placeholder}
         onChangeText={onChangeText}
