@@ -8,6 +8,12 @@ const styles = ScaledSheet.create({
     padding: '2@msr', // = Math.round(moderateScale(2))
     margin: 5,
   },
+  bigTitle: {
+    fontSize: '25@s',
+    fontWeight: 'bold',
+    marginLeft: '5%',
+    marginVertical: '20@s',
+  },
 });
 
 export default styles;

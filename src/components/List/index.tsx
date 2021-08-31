@@ -37,10 +37,11 @@ export default List;
 const styles = ScaledSheet.create({
   list: {
     width: '100%',
-    height: 45,
+    // height: 45,
     alignItems: 'center',
     backgroundColor: colors.lightGrayPlus,
     flexDirection: 'row',
+    paddingVertical: 15,
   },
   title: {
     marginLeft: 10,
@@ -52,7 +53,7 @@ const styles = ScaledSheet.create({
   },
   separate: {
     width: '100%',
-    height: 2,
+    height: 1,
     backgroundColor: colors.lightGray,
     // bottom: 39,
   },

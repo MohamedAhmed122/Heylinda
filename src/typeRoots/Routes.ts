@@ -37,3 +37,8 @@ export type PlayNestedParamList = {
   PlayScreen: {id: string};
   SubscriptionScreen: NO_PARAMS;
 };
+
+export type SettingParamList = {
+  SettingScreen: NO_PARAMS;
+  SubscriptionScreen: NO_PARAMS;
+};
