@@ -12,6 +12,8 @@ import HomeScreen from '@screens/HomeScreen';
 import PlayScreen from '@screens/PlayScreen';
 import StatsScreen from '@screens/StatsScreen';
 import SettingScreen from '@screens/SettingScreen';
+import RegisterScreen from '@screens/RegisterScreen';
+import SubscriptionScreen from '@screens/SubscriptionScreen';
 //STYLES
 import {StyleSheet} from 'react-native';
 import {colors} from 'config';
@@ -38,6 +40,26 @@ export const HomeNavigation = () => {
         }}
         name="PlayScreen"
         component={PlayScreen}
+      />
+      <HomeStack.Screen
+        options={{
+          headerShown: false,
+          headerTitle: 'Play',
+          headerStyle: styles.header,
+          headerTitleStyle: styles.headerTitle,
+        }}
+        name="RegisterScreen"
+        component={RegisterScreen}
+      />
+      <HomeStack.Screen
+        options={{
+          headerShown: false,
+          headerTitle: 'Play',
+          headerStyle: styles.header,
+          headerTitleStyle: styles.headerTitle,
+        }}
+        name="SubscriptionScreen"
+        component={SubscriptionScreen}
       />
     </HomeStack.Navigator>
   );

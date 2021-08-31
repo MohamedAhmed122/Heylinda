@@ -10,7 +10,7 @@ export default function SettingScreen() {
   const dispatch = useDispatch();
   const handleDeleteStats = () => dispatch(removeSession());
   return (
-    <Screen>
+    <Screen scroll>
       <List
         onPress={() => handleDeleteStats()}
         title="clear data"

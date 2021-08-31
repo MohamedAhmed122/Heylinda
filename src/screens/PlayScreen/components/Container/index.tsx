@@ -56,6 +56,7 @@ const Container: React.FC<ContainerProps> = ({id, navigation}) => {
         console.log('finished playing', success);
         setIsFinished(true);
         dispatch(addSession(Number(item?.time)));
+        navigation.navigate('SubscriptionScreen');
       },
     );
     _onFinishedLoadingSubscription = SoundPlayer.addEventListener(

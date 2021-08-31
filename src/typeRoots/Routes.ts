@@ -10,6 +10,14 @@ export type RootTabParamList = {
 export type RootStackHomeParamList = {
   HomeScreen: NO_PARAMS;
   PlayScreen: NO_PARAMS;
+  SubscriptionScreen: NO_PARAMS;
+  RegisterScreen: NO_PARAMS;
+};
+
+export type RootStackSubscriptionParamList = {
+  HomeScreen: NO_PARAMS;
+  SubscriptionScreen: NO_PARAMS;
+  RegisterScreen: NO_PARAMS;
 };
 
 export type RootStackStatsParamList = {
@@ -27,4 +35,5 @@ export type HomeParamList = {
 
 export type PlayNestedParamList = {
   PlayScreen: {id: string};
+  SubscriptionScreen: NO_PARAMS;
 };
