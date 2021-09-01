@@ -13,7 +13,7 @@ export const popular: Meditation[] = [
     image: require('../images/meditate6.jpg'),
   },
   {
-    id: ' 2',
+    id: '2',
     order: 2,
     title: 'Quick Powerful Meditation',
     track: 1,
@@ -23,7 +23,7 @@ export const popular: Meditation[] = [
     image: require('../images/meditate1.jpg'),
   },
   {
-    id: ' 3',
+    id: '3',
     order: 3,
     title: 'Deep Breathing',
     track: 2,
@@ -33,7 +33,7 @@ export const popular: Meditation[] = [
     image: require('../images/meditate2.jpg'),
   },
   {
-    id: ' 4',
+    id: '4',
     order: 4,
     title: 'Yawn and Stretch',
     subtitle: 'Rise and Shine',

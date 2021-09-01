@@ -1,6 +1,7 @@
 export enum ActionType {
   REGISTER_USER = 'REGISTER_USER',
   LOGOUT_USER = 'LOGOUT_USER',
+  SET_TO_SUPER_USER = 'SET_TO_SUPER_USER',
 }
 
 export interface User {
@@ -17,4 +18,8 @@ interface LogoutUser {
   type: ActionType.LOGOUT_USER;
 }
 
-export type Action = RegisterUser | LogoutUser;
+interface SetSuperUser {
+  type: ActionType.SET_TO_SUPER_USER;
+}
+
+export type Action = RegisterUser | LogoutUser | SetSuperUser;

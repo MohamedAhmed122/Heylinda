@@ -38,6 +38,8 @@ const Container: React.FC<ContainerProps> = ({id, navigation}) => {
   const dispatch = useDispatch<AppDispatch>();
 
   let item = data.find((i: Meditation) => i.id === id);
+
+  console.log(id, 'id');
   // instance variables to store the subscriptions
   let _onFinishedPlayingSubscription: EmitterSubscription;
   let _onFinishedLoadingSubscription: EmitterSubscription;

@@ -5,6 +5,10 @@ export const registerUser = (user: User): Action => ({
   payload: user,
 });
 
+export const superUser = (): Action => ({
+  type: ActionType.SET_TO_SUPER_USER,
+});
+
 export const logoutUser = (): Action => ({
   type: ActionType.LOGOUT_USER,
 });
