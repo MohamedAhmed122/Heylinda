@@ -1,17 +1,19 @@
 import React from 'react';
-import {Image, Alert, View} from 'react-native';
+import {Image, Alert} from 'react-native';
 // REDUX
 import {useDispatch, useSelector} from 'react-redux';
 import {registerUser, superUser} from 'redux/Auth/action';
 // TYPES
 import {AppDispatch, RootState} from 'redux/store';
 import {UserRegisterValue} from 'typeRoots/index';
+// APPLE BAY
+import {payByApple} from 'utils/payment';
 // RENDER && STYLES
 import Screen from 'common/Screen';
+import LottieView from 'components/LottieView';
 import ViewForm from './ViewForm';
 import ViewPayment from './ViewPayment';
 import {ScaledSheet} from 'react-native-size-matters';
-import {payByApple} from 'utils/payment';
 
 const RegisterScreen: React.FC = () => {
   const {isAuthenticated, isSuperUser} = useSelector(
@@ -41,11 +43,18 @@ const RegisterScreen: React.FC = () => {
         Alert.alert(` ${err}`);
       });
   };
+  //
+  const handleAnimationFinish = () => {
+    console.log('YES');
+  };
 
   return (
     <Screen scroll>
       {isSuperUser ? (
-        <View />
+        <LottieView
+          source={require('@assets/images/done.json')}
+          onAnimationFinish={handleAnimationFinish}
+        />
       ) : (
         <>
           <Image

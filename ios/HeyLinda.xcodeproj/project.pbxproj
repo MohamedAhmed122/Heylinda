@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		25B3293226DF611100E895BB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B3293126DF611100E895BB /* File.swift */; };
 		7A71550151F03AF73AB27174 /* libPods-HeyLinda.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C7B1DD1D73319EE6E007E7 /* libPods-HeyLinda.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		FBAE3F61ED337B991933DA4D /* libPods-HeyLinda-HeyLindaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A233610C66AE0CE3F8FC7763 /* libPods-HeyLinda-HeyLindaTests.a */; };
@@ -36,6 +37,8 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HeyLinda/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HeyLinda/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HeyLinda/main.m; sourceTree = "<group>"; };
+		25B3293026DF611100E895BB /* HeyLinda-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeyLinda-Bridging-Header.h"; sourceTree = "<group>"; };
+		25B3293126DF611100E895BB /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3011CAFD2720194C085C4F36 /* Pods-HeyLinda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyLinda.release.xcconfig"; path = "Target Support Files/Pods-HeyLinda/Pods-HeyLinda.release.xcconfig"; sourceTree = "<group>"; };
 		4B812E527C9AC22EF917670C /* Pods-HeyLinda-HeyLindaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyLinda-HeyLindaTests.debug.xcconfig"; path = "Target Support Files/Pods-HeyLinda-HeyLindaTests/Pods-HeyLinda-HeyLindaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CB833E5ACFED51E3D9BCAA2 /* Pods-HeyLinda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyLinda.debug.xcconfig"; path = "Target Support Files/Pods-HeyLinda/Pods-HeyLinda.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +117,6 @@
 				4B812E527C9AC22EF917670C /* Pods-HeyLinda-HeyLindaTests.debug.xcconfig */,
 				BCEBCBDF785147C4A473B069 /* Pods-HeyLinda-HeyLindaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,12 +130,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				25B3293126DF611100E895BB /* File.swift */,
 				13B07FAE1A68108700A75B9A /* HeyLinda */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* HeyLindaTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				30D7DAD65F2A3CA59C470974 /* Pods */,
+				25B3293026DF611100E895BB /* HeyLinda-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -412,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				25B3293226DF611100E895BB /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B812E527C9AC22EF917670C /* Pods-HeyLinda-HeyLindaTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCEBCBDF785147C4A473B069 /* Pods-HeyLinda-HeyLindaTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = HeyLindaTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = HeyLinda;
+				SWIFT_OBJC_BRIDGING_HEADER = "HeyLinda-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = HeyLinda;
+				SWIFT_OBJC_BRIDGING_HEADER = "HeyLinda-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
