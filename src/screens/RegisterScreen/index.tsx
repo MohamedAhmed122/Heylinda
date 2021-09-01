@@ -6,6 +6,8 @@ import {registerUser, superUser} from 'redux/Auth/action';
 // TYPES
 import {AppDispatch, RootState} from 'redux/store';
 import {UserRegisterValue} from 'typeRoots/index';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackHomeParamList} from 'typeRoots/Routes';
 // APPLE BAY
 import {payByApple} from 'utils/payment';
 // RENDER && STYLES
@@ -15,7 +17,11 @@ import ViewForm from './ViewForm';
 import ViewPayment from './ViewPayment';
 import {ScaledSheet} from 'react-native-size-matters';
 
-const RegisterScreen: React.FC = () => {
+interface RegisterProps {
+  navigation: StackNavigationProp<RootStackHomeParamList, 'RegisterScreen'>;
+}
+
+const RegisterScreen: React.FC<RegisterProps> = ({navigation}) => {
   const {isAuthenticated, isSuperUser} = useSelector(
     (state: RootState) => state.auth,
   );
@@ -44,9 +50,7 @@ const RegisterScreen: React.FC = () => {
       });
   };
   //
-  const handleAnimationFinish = () => {
-    console.log('YES');
-  };
+  const handleAnimationFinish = () => navigation.navigate('HomeScreen');
 
   return (
     <Screen scroll>

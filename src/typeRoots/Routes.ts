@@ -24,9 +24,9 @@ export type RootStackStatsParamList = {
   StatsScreen: NO_PARAMS;
 };
 
-export type RootStackSettingsParamList = {
-  SettingsScreen: NO_PARAMS;
-};
+// export type RootStackSettingsParamList = {
+//   SettingsScreen: NO_PARAMS;
+// };
 
 export type HomeParamList = {
   HomeScreen: NO_PARAMS;
@@ -38,7 +38,11 @@ export type PlayNestedParamList = {
   SubscriptionScreen: NO_PARAMS;
 };
 
-export type SettingParamList = {
-  SettingScreen: NO_PARAMS;
+export type RootStackSettingsParamList = {
+  SettingsScreen: NO_PARAMS;
   SubscriptionScreen: NO_PARAMS;
+  WatchSubscriptionScreen: NO_PARAMS;
+  HistoryScreen: NO_PARAMS;
+  SupportTeamScreen: NO_PARAMS;
+  ProfileScreen: NO_PARAMS;
 };

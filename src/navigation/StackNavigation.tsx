@@ -14,6 +14,10 @@ import StatsScreen from '@screens/StatsScreen';
 import SettingScreen from '@screens/SettingScreen';
 import RegisterScreen from '@screens/RegisterScreen';
 import SubscriptionScreen from '@screens/SubscriptionScreen';
+import SupportTeamScreen from 'screens/SupportTeamScreen';
+import WatchSubscriptionScreen from '@screens/WatchSubscriptionScreen';
+import HistoryScreen from '@screens/HistoryScreen';
+import ProfileScreen from 'screens/ProfileScreen';
 //STYLES
 import {StyleSheet} from 'react-native';
 import {colors} from 'config';
@@ -94,6 +98,34 @@ export const SettingsNavigation = () => {
         }}
         name="SettingsScreen"
         component={SettingScreen}
+      />
+      <SettingStack.Screen
+        options={{
+          headerShown: false,
+        }}
+        name="SupportTeamScreen"
+        component={SupportTeamScreen}
+      />
+      <SettingStack.Screen
+        options={{
+          headerShown: false,
+        }}
+        name="WatchSubscriptionScreen"
+        component={WatchSubscriptionScreen}
+      />
+      <SettingStack.Screen
+        options={{
+          headerShown: false,
+        }}
+        name="HistoryScreen"
+        component={HistoryScreen}
+      />
+      <SettingStack.Screen
+        options={{
+          headerShown: false,
+        }}
+        name="ProfileScreen"
+        component={ProfileScreen}
       />
     </SettingStack.Navigator>
   );
