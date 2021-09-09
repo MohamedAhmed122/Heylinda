@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
+import {Text, View} from 'react-native';
+// TYPES
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackSettingsParamList} from 'typeRoots/Routes';
+// RENDER
 import {CountdownCircleTimer} from 'react-native-countdown-circle-timer';
 import renderTime from './RenderTime';
 import Screen from 'common/Screen';
-import {scale} from 'react-native-size-matters';
-import {Text, View} from 'react-native';
-import styles from './styles';
-import AppButton from 'common/AppButton';
-import {colors} from 'config';
 import Header from 'components/Header';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackSettingsParamList} from 'typeRoots/Routes';
-// RootStackSettingsParamList
+import AppButton from 'common/AppButton';
+// STYLE
+import {scale} from 'react-native-size-matters';
+import {colors} from 'config';
+import styles from './styles';
 
 interface WatchSubscriptionScreenProps {
   navigation: StackNavigationProp<

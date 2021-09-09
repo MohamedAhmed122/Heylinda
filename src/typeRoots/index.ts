@@ -26,3 +26,11 @@ export interface UserRegisterValue {
   confirmPassword: string;
   password: string;
 }
+
+export interface profileValue {
+  name: string;
+  email: string;
+  age: string;
+  job: string;
+  bio: string;
+}

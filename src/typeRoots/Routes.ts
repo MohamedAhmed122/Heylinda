@@ -34,6 +34,12 @@ export type PlayNestedParamList = {
   SubscriptionScreen: NO_PARAMS;
 };
 
+export type HistoryParamList = {
+  HistoryScreen: NO_PARAMS;
+  PlayScreen: {id: string};
+  SettingsScreen: NO_PARAMS;
+};
+
 export type RootStackSettingsParamList = {
   SettingsScreen: NO_PARAMS;
   SubscriptionScreen: NO_PARAMS;

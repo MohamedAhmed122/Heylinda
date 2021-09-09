@@ -1,4 +1,3 @@
-// import {width, height, isSmallDevice, colors} from '@config/index';
 import {ScaledSheet} from 'react-native-size-matters';
 
 export default ScaledSheet.create({
@@ -15,5 +14,11 @@ export default ScaledSheet.create({
   },
   bottom: {
     marginBottom: 35,
+  },
+  ageContainer: {
+    width: '30%',
+  },
+  jobContainer: {
+    width: '60%',
   },
 });
