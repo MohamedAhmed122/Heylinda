@@ -52,6 +52,7 @@ const SettingScreen: React.FC<SettingProps> = ({navigation}) => {
           title="Subscribe Now"
           name="crown"
           color={colors.success}
+          separate
         />
       )}
       {isSuperUser && (
@@ -70,15 +71,15 @@ const SettingScreen: React.FC<SettingProps> = ({navigation}) => {
             color={colors.secondary}
             separate
           />
+          <List
+            onPress={() => handleNavigateTo('HistoryScreen')}
+            title="History"
+            name="card-text-outline"
+            color={'#FFD912'}
+            separate
+          />
         </>
       )}
-      <List
-        onPress={() => handleNavigateTo('HistoryScreen')}
-        title="History"
-        name="card-text-outline"
-        color={'#FFD912'}
-        separate
-      />
       <List
         onPress={() => handleAddFakeData()}
         title="Add Fake Sessions"
