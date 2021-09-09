@@ -24,10 +24,6 @@ export type RootStackStatsParamList = {
   StatsScreen: NO_PARAMS;
 };
 
-// export type RootStackSettingsParamList = {
-//   SettingsScreen: NO_PARAMS;
-// };
-
 export type HomeParamList = {
   HomeScreen: NO_PARAMS;
   PlayScreen: {id: string};

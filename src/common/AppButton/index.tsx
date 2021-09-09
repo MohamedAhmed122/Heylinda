@@ -26,7 +26,7 @@ export default AppButton;
 
 const styles = StyleSheet.create({
   container: {
-    width: '98%',
+    width: '95%',
     padding: 13,
     borderRadius: 25,
     alignItems: 'center',

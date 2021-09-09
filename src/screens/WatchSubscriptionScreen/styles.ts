@@ -14,11 +14,15 @@ const styles = ScaledSheet.create({
     justifyContent: 'center',
     height: '100%',
   },
+  centerItem: {
+    marginTop: '20@s',
+    width: '100%',
+  },
   enjoyText: {
     fontSize: '25@s',
-    marginTop: '20@s',
     color: colors.secondary,
     fontWeight: '400',
+    textAlign: 'center',
   },
 });
 

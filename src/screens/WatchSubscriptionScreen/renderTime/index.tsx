@@ -1,4 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
+import styles from 'config/styles';
 import React from 'react';
 import {Animated, Text} from 'react-native';
 
@@ -15,12 +16,12 @@ interface renderTimeProps {
   remainingTime: number;
   animatedColor: string;
 }
-const renderTime: React.FC<renderTimeProps> = ({
+const RenderTime: React.FC<renderTimeProps> = ({
   remainingTime,
   animatedColor,
 }) => {
   if (remainingTime === 0) {
-    return <Text>Too lale...</Text>;
+    return <Text style={styles.subTitle}>Time to pay for subscription</Text>;
   } else {
     return (
       <Animated.Text style={{color: animatedColor, fontSize: 22}}>
@@ -29,4 +30,4 @@ const renderTime: React.FC<renderTimeProps> = ({
     );
   }
 };
-export default renderTime;
+export default RenderTime;
