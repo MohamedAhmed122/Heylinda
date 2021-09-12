@@ -18,6 +18,7 @@ import SupportTeamScreen from 'screens/SupportTeamScreen';
 import WatchSubscriptionScreen from '@screens/WatchSubscriptionScreen';
 import HistoryScreen from '@screens/HistoryScreen';
 import ProfileScreen from 'screens/ProfileScreen';
+import FavoriteScreen from 'screens/FavoriteScreen';
 //STYLES
 import {StyleSheet} from 'react-native';
 import {colors} from 'config';
