@@ -11,10 +11,10 @@ import {
 
 interface AppInputProps {
   placeholder: string;
-  value: string;
+  value?: string;
 
   secureTextEntry?: boolean;
-  onChangeText: (text: string) => void;
+  onChangeText?: (text: string) => void;
   onBlur?:
     | ((e: NativeSyntheticEvent<TextInputFocusEventData>) => void)
     | undefined;

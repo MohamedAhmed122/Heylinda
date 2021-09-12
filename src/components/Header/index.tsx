@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({children, title, handleNavigate}) => {
         onPress={() => handleNavigate()}>
         <AntDesign name="left" size={20} color={colors.secondary} />
       </TouchableOpacity>
-      <Text>
+      <Text style={styles.title}>
         {title?.length > 20 ? title?.substring(0, 20 - 3) + '...' : title}
       </Text>
       <View>{children}</View>
@@ -48,5 +48,8 @@ const styles = ScaledSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+  },
+  title: {
+    color: colors.secondary,
   },
 });

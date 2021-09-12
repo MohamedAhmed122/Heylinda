@@ -24,8 +24,13 @@ import {colors} from 'config';
 
 export const HomeNavigation = () => {
   const HomeStack = createNativeStackNavigator<RootStackHomeParamList>();
+
   return (
-    <HomeStack.Navigator screenOptions={{presentation: 'modal'}}>
+    <HomeStack.Navigator
+      screenOptions={{
+        presentation: 'modal',
+        // gestureResponseDistance: {vertical: 200, horizontal: 150},
+      }}>
       <HomeStack.Screen
         options={{
           headerTitle: 'Home',

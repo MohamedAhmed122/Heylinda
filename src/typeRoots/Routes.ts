@@ -12,6 +12,7 @@ export type RootStackHomeParamList = {
   PlayScreen: NO_PARAMS;
   SubscriptionScreen: NO_PARAMS;
   RegisterScreen: NO_PARAMS;
+  FavoriteScreen: NO_PARAMS;
 };
 
 export type RootStackSubscriptionParamList = {

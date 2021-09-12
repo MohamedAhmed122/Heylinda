@@ -3,7 +3,17 @@ import React from 'react';
 import {BaseToast} from 'react-native-toast-message';
 
 const toastConfig = {
-  success: ({text1, text2, hide, ...rest}) => (
+  success: ({
+    text1,
+    text2,
+    hide,
+    ...rest
+  }: {
+    text1: string;
+    text2: string;
+    hide: (() => void) | undefined;
+    rest: string[];
+  }) => (
     <BaseToast
       {...rest}
       style={{borderLeftColor: 'green', height: 100}}
@@ -23,7 +33,17 @@ const toastConfig = {
     />
   ),
 
-  error: ({text1, text2, hide, ...rest}) => (
+  error: ({
+    text1,
+    text2,
+    hide,
+    ...rest
+  }: {
+    text1: string;
+    text2: string;
+    hide: (() => void) | undefined;
+    rest: string[];
+  }) => (
     <BaseToast
       {...rest}
       style={{borderLeftColor: 'red', height: 100}}
