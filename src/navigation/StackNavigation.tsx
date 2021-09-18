@@ -18,7 +18,7 @@ import SupportTeamScreen from 'screens/SupportTeamScreen';
 import WatchSubscriptionScreen from '@screens/WatchSubscriptionScreen';
 import HistoryScreen from '@screens/HistoryScreen';
 import ProfileScreen from 'screens/ProfileScreen';
-import FavoriteScreen from 'screens/FavoriteScreen';
+// import FavoriteScreen from 'screens/FavoriteScreen';
 //STYLES
 import {StyleSheet} from 'react-native';
 import {colors} from 'config';
@@ -28,9 +28,9 @@ export const HomeNavigation = () => {
 
   return (
     <HomeStack.Navigator
+      // gestureResponseDistance={100}
       screenOptions={{
         presentation: 'modal',
-        // gestureResponseDistance: {vertical: 200, horizontal: 150},
       }}>
       <HomeStack.Screen
         options={{
@@ -92,6 +92,22 @@ export const StatsNavigation = () => {
   );
 };
 
+// export const StatsNavigation = () => {
+//   const StatsStack = createNativeStackNavigator<RootStackStatsParamList>();
+//   return (
+//     <StatsStack.Navigator>
+//       <StatsStack.Screen
+//         name="StatsScreen"
+//         component={StatsScreen}
+//         options={{
+//           headerTitle: 'Stats',
+//           headerStyle: styles.header,
+//           headerTitleStyle: styles.headerTitle,
+//         }}
+//       />
+//     </StatsStack.Navigator>
+//   );
+// };
 export const SettingsNavigation = () => {
   const SettingStack = createNativeStackNavigator<RootStackSettingsParamList>();
   return (
